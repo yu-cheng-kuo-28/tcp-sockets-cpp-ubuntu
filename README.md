@@ -1,4 +1,6 @@
 # tcp-sockets-cpp-ubuntu
 (Still in progress) Trying to build up a chat application leveraging TCP sockets with C++ and Ubuntu
 
-![01](pictures/01.png)
+<div class="flexible-container">
+  <img src="pictures/01.png" height="300">
+</div>

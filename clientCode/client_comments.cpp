@@ -1,3 +1,7 @@
+/*
+Compile using "g++ -o client client.cpp -lws2_32"
+*/
+
 #include <iostream>      // Include for input/output stream
 #include <winsock2.h>    // Include for Windows socket programming
 #include <ws2tcpip.h>    // Include for Windows socket programming

@@ -5,7 +5,7 @@
 
 (1) Progress
 
-#### Progress Now: Learning multithreading and synchronization techniques regarding building a chat application
+#### Progress Now: Built a basic TCP sockets connection between the client (my laptop) and the server (Ubuntu VPS). Learning multithreading and synchronization techniques regarding building a chat application
 
 [Hands-On Multithreading with C++ 02—Synchronization](https://yc-kuo.medium.com/hands-on-multithreading-with-c-02-synchronization-534ba1fb31e3)
 

@@ -1,5 +1,5 @@
 # tcp-sockets-cpp-ubuntu
-(Still in progress) Trying to build up a chat application leveraging TCP sockets with C++ and Ubuntu
+(Still in progress) Trying to build up a chat application leveraging *TCP sockets* & *multithreading* with *C++* on Ubuntu
 
 ----
 #### Progress Now: Learning multithreading and synchronization techniques regarding building a chat application

@@ -5,7 +5,9 @@
 
 (1) Progress
 
-#### Progress Now: Built a basic TCP sockets connection between the server (Ubuntu VPS) and the client (my laptop). Learning multithreading and synchronization techniques (mutex & atomic operation) in order to craft a chat application
+#### Progress Now: Built a basic TCP sockets connection between the server (Ubuntu VPS) and the client (laptop). Implemented solutions to deadlocks, producer-consumer problem, & readers-writers problem with C++ and inter-thread communication
+
+### Technical Articles regarding this side project:
 
   | #  | Title | Link |
   |----|-------------|---------|

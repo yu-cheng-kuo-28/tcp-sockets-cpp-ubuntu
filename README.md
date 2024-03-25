@@ -1,11 +1,8 @@
 # tcp-sockets-cpp-ubuntu
-(Still in progress) Trying to build up a chat application leveraging *TCP sockets* & *multithreading* with *C++* on Ubuntu
+
+Built a basic TCP sockets connection between the server (Ubuntu VPS) and the client (laptop). Implemented solutions to deadlocks, producer-consumer problem, & readers-writers problem with C++ and inter-thread communication
 
 ----
-
-(1) Progress
-
-#### Progress Now: Built a basic TCP sockets connection between the server (Ubuntu VPS) and the client (laptop). Implemented solutions to deadlocks, producer-consumer problem, & readers-writers problem with C++ and inter-thread communication
 
 ### Technical Articles regarding this side project:
 

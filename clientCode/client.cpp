@@ -4,7 +4,7 @@ Compile using "g++ -o client client.cpp -lws2_32"
 #include <iostream>
 #include <winsock2.h>
 #include <ws2tcpip.h>
-
+using namespace std;
 #pragma comment(lib, "Ws2_32.lib")
 
 int main() {
@@ -15,12 +15,12 @@ int main() {
 
     // Initialize Winsock
     if (WSAStartup(MAKEWORD(2,2), &wsaData) != 0) {
-        std::cout << "Winsock initialization failed.\n";
+        cout << "Winsock initialization failed.\n";
         return 1;
     }
 
     if ((sock = socket(AF_INET, SOCK_STREAM, 0)) == INVALID_SOCKET) {
-        std::cout << "Socket creation failed with error: " << WSAGetLastError() << std::endl;
+        cout << "Socket creation failed with error: " << WSAGetLastError() << endl;
         WSACleanup();
         return 1;
     }
@@ -32,21 +32,21 @@ int main() {
     serv_addr.sin_addr.s_addr = inet_addr("XXX.XXX.XX.XX"); // Set your IP of the server here
 
     if (serv_addr.sin_addr.s_addr == INADDR_NONE) {
-        std::cout << "Invalid address/ Address not supported.\n";
+        cout << "Invalid address/ Address not supported.\n";
         closesocket(sock);
         WSACleanup();
         return 1;
     }
 
     if (connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0) {
-        std::cout << "Connection Failed with error: " << WSAGetLastError() << std::endl;
+        cout << "Connection Failed with error: " << WSAGetLastError() << endl;
         closesocket(sock);
         WSACleanup();
         return 1;
     }
 
     send(sock, hello, strlen(hello), 0);
-    std::cout << "Hello message sent\n";
+    cout << "Hello message sent\n";
 
     // Close the socket
     closesocket(sock);

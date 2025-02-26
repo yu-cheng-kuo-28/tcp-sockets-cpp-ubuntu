@@ -6,6 +6,7 @@ Compile using "g++ -o server server.c"
 #include <netinet/in.h>
 #include <cstring>
 #include <unistd.h>
+using namespace std;
 
 int main() {
     int server_fd, new_socket;
@@ -40,7 +41,7 @@ int main() {
         exit(EXIT_FAILURE);
     }
 
-    std::cout << "Listening..." << std::endl;
+    cout << "Listening..." << endl;
 
     // Accept an incoming connection
     if ((new_socket = accept(server_fd, (struct sockaddr *)&address, (socklen_t*)&addrlen))<0) {
@@ -51,7 +52,7 @@ int main() {
     // Receive data from the client
     char buffer[1024] = {0}; // Buffer to store the data from client
     int valread = read(new_socket, buffer, 1024); // Reading data into the buffer
-    std::cout << "Received message: " << buffer << std::endl;
+    cout << "Received message: " << buffer << endl;
 
     // Close the socket when done
     close(server_fd);

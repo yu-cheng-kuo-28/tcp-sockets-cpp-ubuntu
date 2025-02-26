@@ -3,6 +3,7 @@
 #include <netinet/in.h>      // Include for internet protocols
 #include <cstring>           // Include for string operations
 #include <unistd.h>          // Include for POSIX operating system API
+using namespace std;
 
 int main() {
     int server_fd, new_socket;           // Declare file descriptors for server and new socket
@@ -37,7 +38,7 @@ int main() {
         exit(EXIT_FAILURE);              // Exit with failure status
     }
 
-    std::cout << "Listening..." << std::endl; // Print message indicating server is listening
+    cout << "Listening..." << endl; // Print message indicating server is listening
 
     // Accept an incoming connection
     if ((new_socket = accept(server_fd, (struct sockaddr *)&address, (socklen_t*)&addrlen))<0) {
@@ -48,7 +49,7 @@ int main() {
     // Receive data from the client
     char buffer[1024] = {0};             // Buffer to store data from client
     int valread = read(new_socket, buffer, 1024); // Read data into buffer
-    std::cout << "Received message: " << buffer << std::endl; // Print received message
+    cout << "Received message: " << buffer << endl; // Print received message
 
     // Close the socket when done
     close(server_fd);                    // Close the server file descriptor
